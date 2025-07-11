@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import axios from 'axios';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
@@ -13,14 +14,18 @@ const LoginPage = () => {
     setError('');
 
     try {
-      const res = await axios.post('/auth/login', { email, password });
-
+const res=await axios.post('http://localhost:8000/api/auth/login', {
+        email,
+        password,
+      });
       const { role } = res.data;
 
       if (role === 'admin') {
-        router.push('/admin/profile');
+        // router.push('/admin/profile');
       } else if (role === 'host') {
-        router.push('/host/profile');
+        router.push('/host');
+      } else if (role === 'user') {
+        router.push('/home');
       } else {
         setError('Unknown role');
       }
@@ -31,7 +36,7 @@ const LoginPage = () => {
   };
 
   return (
-    <main className="flex items-center justify-center min-h-screen bg-gray-100">
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-xl shadow-md w-full max-w-md">
         <h2 className="text-3xl font-bold text-center mb-6 text-green-700">Villagestay Login</h2>
         <form onSubmit={handleLogin} className="space-y-4">
@@ -62,6 +67,7 @@ const LoginPage = () => {
           {error && <p className="text-red-500 text-sm">{error}</p>}
 
           <button
+          onClick={handleLogin}
             type="submit"
             className="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 font-semibold"
           >
@@ -69,7 +75,7 @@ const LoginPage = () => {
           </button>
         </form>
       </div>
-    </main>
+    </div>
   );
 };
 
