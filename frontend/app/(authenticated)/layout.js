@@ -1,13 +1,13 @@
 // app/layout.jsx
 "use client";
-import "./styles/global.css";
-import Header from "./(authenticated)/Header/page";
+import Header from "./Header/page";
 
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-gray-100 font-inter">
+      <Header></Header>
         <main className="min-h-screen">{children}</main>
       </body>
     </html>

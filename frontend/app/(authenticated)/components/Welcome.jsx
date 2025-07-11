@@ -20,12 +20,13 @@ const Welcome = () => {
           <p className="text-lg md:text-2xl mb-10 max-w-2xl mx-auto font-medium opacity-90">
             Discover authentic homestays, vibrant traditions, and sustainable adventures.
           </p>
-          <button
-            onClick={() => setCurrentPage('experiences')}
+          <Link href={"/experience"}>
+            <button
             className="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-10 rounded-full text-xl transition-all duration-300 transform hover:scale-105 shadow-xl border-2 border-white focus:outline-none focus:ring-4 focus:ring-green-300"
           >
             Explore Experiences
           </button>
+          </Link>
         </div>
       </section>
 

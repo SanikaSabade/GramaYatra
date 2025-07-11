@@ -19,7 +19,7 @@ const Header = () => {
   const router = useRouter();
 
   const navItems = [
-    { name: 'Home', icon: Home, href: '/' },
+    { name: 'Home', icon: Home, href: '/home' },
     { name: 'Experiences', icon: Compass, href: '/experience' },
     { name: 'Videos', icon: PlayCircle, href: '/videos' },
     { name: 'Skill-Share', icon: Handshake, href: '/skill-share' },

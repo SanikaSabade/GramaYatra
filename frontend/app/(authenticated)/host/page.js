@@ -1,5 +1,6 @@
 'use client'; 
 import { Users, Compass, Heart } from 'lucide-react';
+import Link from 'next/link';
 
 const HostPage = () => {
   return (
@@ -85,11 +86,11 @@ const HostPage = () => {
           </div>
         </div>
 
-        <div className="text-center mt-12">
+        <Link href={"/register"} className="text-center mt-12 flex justify-center">
           <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-10 rounded-full text-xl transition-all duration-300 transform hover:scale-105 shadow-xl focus:outline-none focus:ring-4 focus:ring-green-300">
             Register as a Host
           </button>
-        </div>
+        </Link>
       </section>
     </main>
   );
