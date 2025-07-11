@@ -1,49 +1,49 @@
-'use client';
+"use client";
 
-import { Users, Video } from 'lucide-react';
+import { Users, Video } from "lucide-react";
 
 const videos = [
   {
-    id: 'dQw4w9WgXcQ',
-    title: 'A Day on Our Organic Farm in Punjab',
+    id: "qkqtcXuogu4",
+    title: "A Day on Our Organic Farm in Punjab",
     description:
-      'Join the Singh family as they walk you through their organic farm, showcasing traditional farming methods and the joy of harvest.',
-    host: 'The Singh Family, Amritsar',
+      "Join the Singh family as they walk you through their organic farm, showcasing traditional farming methods and the joy of harvest.",
+    host: "The Singh Family, Amritsar",
   },
   {
-    id: 'o_l4b42-M40',
-    title: 'Weaving Traditions of Odisha: A Handloom Story',
+    id: "Nl_Q04kDvNE",
+    title: "Weaving Traditions of Odisha: A Handloom Story",
     description:
-      'Witness the intricate art of Pattachitra weaving, passed down through generations in a remote Odisha village.',
-    host: 'Meena Devi, Puri',
+      "Witness the intricate art of Pattachitra weaving, passed down through generations in a remote Odisha village.",
+    host: "Meena Devi, Puri",
   },
   {
-    id: 'M_gK5p0H54c',
-    title: 'Cooking Authentic Kerala Sadya with Local Spices',
+    id: "0l-XvQ89vYk",
+    title: "Cooking Authentic Kerala Sadya with Local Spices",
     description:
-      'Learn to prepare a traditional Keralan Sadya feast from scratch, using fresh ingredients from our village garden.',
-    host: 'The Nair Family, Alleppey',
+      "Learn to prepare a traditional Keralan Sadya feast from scratch, using fresh ingredients from our village garden.",
+    host: "The Nair Family, Alleppey",
   },
   {
-    id: 'Yl_zR2X-b6I',
+    id: "n0oxT5G4drk",
     title: "Life in the Himalayan Foothills: A Shepherd's Tale",
     description:
-      'Follow a local shepherd through the breathtaking landscapes of Himachal, experiencing daily life in the mountains.',
-    host: 'Rohan Sharma, Manali',
+      "Follow a local shepherd through the breathtaking landscapes of Himachal, experiencing daily life in the mountains.",
+    host: "Rohan Sharma, Manali",
   },
   {
-    id: 't_j16g46W00',
-    title: 'Desert Rhythms: Music & Dance of Rajasthan',
+    id: "8Z5ZcCYJeYQ",
+    title: "Desert Rhythms: Music & Dance of Rajasthan",
     description:
-      'Immerse yourself in the vibrant folk music and dance of the Thar desert, performed by local artists.',
-    host: 'The Kalbeliya Troupe, Jaisalmer',
+      "Immerse yourself in the vibrant folk music and dance of the Thar desert, performed by local artists.",
+    host: "The Kalbeliya Troupe, Jaisalmer",
   },
   {
-    id: 'Hq0WlW_4Q44',
-    title: 'Konkan Coast: Fishing Village Life & Fresh Catch',
+    id: "sJwqMTMpk2g",
+    title: "Konkan Coast: Fishing Village Life & Fresh Catch",
     description:
-      'Discover the daily life of a fishing village on the Konkan coast and enjoy the freshest seafood prepared traditionally.',
-    host: 'The Koli Community, Guhagar',
+      "Discover the daily life of a fishing village on the Konkan coast and enjoy the freshest seafood prepared traditionally.",
+    host: "The Koli Community, Guhagar",
   },
 ];
 
@@ -57,7 +57,10 @@ export default function VideoCard() {
         </h2>
 
         <p className="text-xl text-gray-700 text-center mb-12 max-w-4xl mx-auto leading-relaxed">
-          Experience the vibrant life of our host communities through their own lenses. Villagestay proudly promotes these authentic stories, connecting you directly to the traditions and daily rhythms of rural India.
+          Experience the vibrant life of our host communities through their own
+          lenses. Villagestay proudly promotes these authentic stories,
+          connecting you directly to the traditions and daily rhythms of rural
+          India.
         </p>
 
         <div className="bg-yellow-50 rounded-2xl p-6 mb-12 shadow-md border border-yellow-200 text-center">
@@ -65,7 +68,12 @@ export default function VideoCard() {
             By the people, for the people:
           </p>
           <p className="text-gray-700 leading-relaxed">
-            These videos are shared by our hosts, showcasing their unique worlds. Villagestay takes only a small, transparent commission from bookings and potential direct support, ensuring the platform's sustainability and directly empowering local livelihoods. Your engagement here directly contributes to their prosperity and the preservation of their culture.
+            These videos are shared by our hosts, showcasing their unique
+            worlds. Villagestay takes only a small, transparent commission from
+            bookings and potential direct support, ensuring the platform's
+            sustainability and directly empowering local livelihoods. Your
+            engagement here directly contributes to their prosperity and the
+            preservation of their culture.
           </p>
         </div>
 
@@ -89,7 +97,9 @@ export default function VideoCard() {
                 <h3 className="text-xl font-semibold mb-2 text-gray-800 font-inter">
                   {video.title}
                 </h3>
-                <p className="text-gray-600 text-sm mb-3">{video.description}</p>
+                <p className="text-gray-600 text-sm mb-3">
+                  {video.description}
+                </p>
                 <p className="text-green-700 text-sm font-medium flex items-center">
                   <Users size={16} className="mr-2" />
                   Host: {video.host}
@@ -102,4 +112,3 @@ export default function VideoCard() {
     </main>
   );
 }
-
