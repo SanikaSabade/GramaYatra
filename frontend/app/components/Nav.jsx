@@ -9,7 +9,7 @@ export default function Nav() {
     { label: 'Home', href: '/' },
     { label: 'About', href: '/about' },
     { label: 'Become a Host', href: '/host' },
-    { label: 'Experiences', href: '/experience' },
+    { label: 'Experience', href: '/experience' },
     { label: 'Skill Share', href: '/skill-share' },
     { label: 'Videos', href: '/videocard' },
     { label: 'Login', href: '/login' },

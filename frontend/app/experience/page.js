@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { MapPin, DollarSign, Star } from 'lucide-react';
 
-const experiences = [
+const experience = [
   {
     id: 1,
     name: 'Rustic Farm Stay in Punjab',
@@ -103,7 +103,7 @@ export default function ExperiencesPage() {
   const router = useRouter();
 
   const handleViewDetails = (exp) => {
-    router.push(`/experiences/${exp.id}`); 
+    router.push(`/experience/${exp.id}`); 
   };
 
   return (
@@ -113,7 +113,7 @@ export default function ExperiencesPage() {
       </h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        {experiences.map((exp) => (
+        {experience.map((exp) => (
           <div
             key={exp.id}
             className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-200 transform hover:scale-105 transition-all duration-300 group"
