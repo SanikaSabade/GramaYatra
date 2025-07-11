@@ -7,15 +7,14 @@ import {
   deleteHost,
 } from "../controllers/hostController.js";
 
-import { protect } from "../middleware/authMiddleware.js";
-
 const router = express.Router();
 
-router.get("/", protect, getAllHosts);          
-router.get("/:id", protect, getHostById);       
+router.get("/", getAllHosts);
+router.get("/:id", getHostById);
 
-router.post("/", protect, createHost);        
-router.put("/:id", protect, updateHost);        
-router.delete("/:id", protect, deleteHost);    
+router.post("/", createHost);
+router.put("/:id", updateHost);
+router.delete("/:id", deleteHost);
+router.post("/experiences", createExperience);
 
 export default router;
