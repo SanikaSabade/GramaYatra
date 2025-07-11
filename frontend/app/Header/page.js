@@ -20,7 +20,7 @@ const Header = () => {
 
   const navItems = [
     { name: 'Home', icon: Home, href: '/' },
-    { name: 'Experiences', icon: Compass, href: '/experiences' },
+    { name: 'Experiences', icon: Compass, href: '/experience' },
     { name: 'Videos', icon: PlayCircle, href: '/videos' },
     { name: 'Skill-Share', icon: Handshake, href: '/skill-share' },
     { name: 'Become a Host', icon: Users, href: '/host' },

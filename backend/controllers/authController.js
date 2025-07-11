@@ -1,10 +1,11 @@
-const User = require("../models/User");
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
+import User from "../models/User.js";
+import bcrypt from "bcryptjs";
+import jwt from "jsonwebtoken";
 
-const generateToken = (id) => jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "7d" });
+const generateToken = (id) =>
+  jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "7d" });
 
-exports.register = async (req, res) => {
+export const register = async (req, res) => {
   const { name, email, password, role } = req.body;
   const userExists = await User.findOne({ email });
   if (userExists) return res.status(400).json({ message: "Email already exists" });
@@ -15,7 +16,7 @@ exports.register = async (req, res) => {
   res.status(201).json({ token, role: user.role });
 };
 
-exports.login = async (req, res) => {
+export const login = async (req, res) => {
   const { email, password } = req.body;
   const user = await User.findOne({ email });
   if (!user) return res.status(404).json({ message: "User not found" });
@@ -25,4 +26,5 @@ exports.login = async (req, res) => {
 
   const token = generateToken(user._id);
   res.json({ token, role: user.role });
+  return res.json({ Success: "True" }); // Note: This line is unreachable and redundant
 };

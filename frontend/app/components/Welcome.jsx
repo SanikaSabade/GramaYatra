@@ -1,8 +1,8 @@
-'use client'; 
-
+"use client"
 import { Home, Leaf, Users, Compass, CheckCircle, Globe } from 'lucide-react';
+import Link from 'next/link';
 
-const Welcome = ({ setCurrentPage }) => {
+const Welcome = () => {
   return (
     <main className="container mx-auto px-4 py-12">
       <section
@@ -108,12 +108,12 @@ const Welcome = ({ setCurrentPage }) => {
           Are you a rural host eager to share your home, culture, or unique skills? Join our growing
           community!
         </p>
-        <button
-          onClick={() => setCurrentPage('host')}
+        <Link href="/host"><button
+          
           className="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-4 px-10 rounded-full text-xl transition-all duration-300 transform hover:scale-105 shadow-xl focus:outline-none focus:ring-4 focus:ring-yellow-300"
         >
           Become a Host Today
-        </button>
+        </button></Link>
       </section>
     </main>
   );
